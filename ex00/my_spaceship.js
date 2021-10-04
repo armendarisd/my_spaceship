@@ -1,60 +1,60 @@
 function my_spaceship(value){
-    var currentPosition = {x:0, y:0, direction:"UP"};
+    var currentPosition = {x:0, y:0, direction:"up"};
     var i = 0;
     var action = "";
     while (value.length >= i){
         action = value.substring(i, i+1);
-        switch (currentPosition["direction"]){
+        switch (currentPosition[direction]){
             
-            case "UP":
+            case "up":
                 switch (action){
                     case "A":
-                        currentPosition["y"]--; 
+                        currentPosition.y--; 
                     break;
                     case "R":
-                        currentPosition["direction"] = "RIGHT";
+                        currentPosition.direction = "right";
                     break;
                     case "L":
-                        currentPosition["direction"] = "LEFT";
+                        currentPosition.direction = "left";
                     break;
                 };
             break;
-            case "DOWN":
+            case "down":
                 switch (action){
                     case "A":
-                        currentPosition["y"]++; 
+                        currentPosition.y++; 
                     break;
                     case "R":
-                        currentPosition["direction"] = "LEFT";
+                        currentPosition.direction = "left";
                     break;
                     case "L":
-                        currentPosition["direction"] = "RIGHT";
+                        currentPosition.direction = "right";
                     break;
                 };
             break;
-            case "RIGHT":
+            case "right":
                 switch (action){
                     case "A":
-                        currentPosition["x"]++; 
+                        currentPosition.x++; 
                     break;
                     case "R":
-                        currentPosition["direction"] = "DOWN";
+                        currentPosition.direction = "down";
                     break;
                     case "L":
-                        currentPosition["direction"] = "UP";
+                        currentPosition.direction = "up";
                     break;
                 };
             break;
-            case "LEFT":
+            case "left":
                 switch (action){
                     case "A":
-                        currentPosition["x"]--; 
+                        currentPosition.x--; 
                     break;
                     case "R":
-                        currentPosition["direction"] = "UP";
+                        currentPosition.direction = "up";
                     break;
                     case "L":
-                        currentPosition["direction"] = "DOWN";
+                        currentPosition.direction = "down";
                     break;
                 };
             break;
