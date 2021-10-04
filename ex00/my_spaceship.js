@@ -1,65 +1,67 @@
 function my_spaceship(value){
-    var currentPosition = {x:0, y:0, direction:"up"};
+    const currentPosition = {x:0, y:0, direction:'up'};
     var i = 0;
-    var action = "";
+    var action = '';
     while (value.length >= i){
         action = value.substring(i, i+1);
-        switch (currentPosition[direction]){
+        
+        switch (currentPosition.direction){
             
-            case "up":
+            case 'up':
                 switch (action){
-                    case "A":
+                    case 'A':
                         currentPosition.y--; 
                     break;
-                    case "R":
-                        currentPosition.direction = "right";
+                    case 'R':
+                        currentPosition.direction = 'right';
                     break;
-                    case "L":
-                        currentPosition.direction = "left";
+                    case 'L':
+                        currentPosition.direction = 'left';
                     break;
                 };
             break;
-            case "down":
+            case 'down':
                 switch (action){
-                    case "A":
+                    case 'A':
                         currentPosition.y++; 
                     break;
-                    case "R":
-                        currentPosition.direction = "left";
+                    case 'R':
+                        currentPosition.direction = 'left';
                     break;
-                    case "L":
-                        currentPosition.direction = "right";
+                    case 'L':
+                        currentPosition.direction = 'right';
                     break;
                 };
             break;
-            case "right":
+            case 'right':
                 switch (action){
-                    case "A":
+                    case 'A':
                         currentPosition.x++; 
                     break;
-                    case "R":
-                        currentPosition.direction = "down";
+                    case 'R':
+                        currentPosition.direction = 'down';
                     break;
-                    case "L":
-                        currentPosition.direction = "up";
+                    case 'L':
+                        currentPosition.direction = 'up';
                     break;
                 };
             break;
-            case "left":
+            case 'left':
                 switch (action){
-                    case "A":
+                    case 'A':
                         currentPosition.x--; 
                     break;
-                    case "R":
-                        currentPosition.direction = "up";
+                    case 'R':
+                        currentPosition.direction = 'up';
                     break;
-                    case "L":
-                        currentPosition.direction = "down";
+                    case 'L':
+                        currentPosition.direction = 'down';
                     break;
                 };
             break;
         };
         i++;
     };
-    return currentPosition;
+    var currentPositionSTR = "{"+"x: "+currentPosition.x+", y: "+currentPosition.y+", direction: "+"'"+currentPosition.direction+"'"+"}";
+    return currentPositionSTR;
 };
